@@ -20,7 +20,7 @@ struct TaskViewView: View {
                         Text(task.priority.taskPriority)
                             .padding(5)
                             .foregroundColor(.red)
-                            .background(Color.red.opacity(0.3).clipShape(RoundedRectangle(cornerRadius: 10)))
+                            .background(Color.red.opacity(0.3).clipShape(Capsule()))
                             .font(.system(size: 15))
                 case .normal:
                     Text(task.priority.taskPriority)
@@ -28,7 +28,7 @@ struct TaskViewView: View {
                             .padding(5)
                             .background(
                                 Color.green.opacity(0.3)
-                                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                                    .clipShape(Capsule())
                             )
                             .font(.system(size: 15))
                     
@@ -38,7 +38,7 @@ struct TaskViewView: View {
                         .padding(5)
                         .foregroundColor(.blue)
                         .background(Color.blue.opacity(0.1)
-                            .clipShape(RoundedRectangle(cornerRadius: 10)))
+                            .clipShape(Capsule()))
                 }
             }
         
