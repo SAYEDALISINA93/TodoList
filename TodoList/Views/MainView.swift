@@ -30,6 +30,7 @@ struct MainView: View {
                                     .foregroundStyle(.black)
                             })
                         }
+                        .onDelete(perform: deleteTask)
                     }
                     .scrollContentBackground(.hidden)
                     .navigationTitle("Tasks")
@@ -46,6 +47,10 @@ struct MainView: View {
                 .background(Color.gray.opacity(0.08))
             }
         }
+    }
+    
+    private func deleteTask(at offSet: IndexSet) {
+        tasks.remove(atOffsets: offSet)
     }
 }
 
